@@ -31,7 +31,7 @@ namespace _2_BUS.Services
             if (obj == null) return "Thất bại";
             var a = new HoaDon()
             {
-                Id = obj.Id,
+                Id = Guid.NewGuid(),
                 Ma=obj.Ma,
                 IdKH = obj.IdKH,
                 IdNV = obj.IdNV,

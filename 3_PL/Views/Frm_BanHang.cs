@@ -49,7 +49,10 @@ namespace _3_PL.Views
             dgrid_sanpham.Columns[3].Name = "Số lượng tồn";
             foreach (var item in _isanphamservice.Show())
             {
-                dgrid_sanpham.Rows.Add(item.MaSP, item.TenSP, item.GiaBan, item.SoLuongTon);
+                if (item.SoLuongTon > 0)
+                {
+                    dgrid_sanpham.Rows.Add(item.MaSP, item.TenSP, item.GiaBan, item.SoLuongTon);
+                }
             }
         }
         public void LoadGioHang()
